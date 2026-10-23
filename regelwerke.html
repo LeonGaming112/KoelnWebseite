@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serverregelwerk | NRW RP</title>
+    <meta name="description" content="Das offizielle Regelwerk von NRW RP. Lies dir die Ingame-, Fraktions- und Discord-Regeln aufmerksam durch, um ein faires Rollenspiel zu gewährleisten.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="../Bilder/p4d93rk-removebg-preview.png" type="image/x-icon">
+</head>
+<body>
+    <!-- Theme Flash Prevention Script -->
+    <script>
+        if (localStorage.getItem('theme') === 'dark') {
+            document.body.classList.add('dark-theme');
+        }
+    </script>
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo-section">
+                <img src="../Bilder/p4d93rk-removebg-preview.png" alt="NRW RP Logo">
+                <div class="logo-text">
+                    NRW RP
+                    <span>Roblox ERLC Server</span>
+                </div>
+            </a>
+
+            <!-- Navigation Links -->
+            <nav class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link" data-page="home">Startseite</a>
+                <a href="infos.html" class="nav-link" data-page="infos">Infos</a>
+                <a href="news.html" class="nav-link" data-page="news">News</a>
+                <a href="fuehrung.html" class="nav-link" data-page="führung">Führung</a>
+                <a href="regelwerke.html" class="nav-link active" data-page="regelwerke">Regelwerke</a>
+                <a href="login.html" class="nav-link" data-page="login">Staff Portal</a>
+            </nav>
+
+            <!-- Actions (Theme Toggle & Social Links) -->
+            <div class="header-actions">
+                <div class="social-icons-header">
+                    <a href="https://discord.gg/nrw-rp" target="_blank" class="social-icon-btn" title="Tritt unserem Discord bei" aria-label="Discord">
+                        <svg width="20" height="20" viewBox="0 0 127.14 96.36" fill="currentColor"><path d="M107.7,8.07A105.15,105.15,0,0,0,77.26,0a77.19,77.19,0,0,0-3.3,6.83A96.67,96.67,0,0,0,53.22,6.83,77.19,77.19,0,0,0,49.88,0,105.15,105.15,0,0,0,19.44,8.07C3.66,31.58-1.86,54.65,1,77.53A105.73,105.73,0,0,0,32,96.36a77.7,77.7,0,0,0,6.63-10.85,68.43,68.43,0,0,1-10.45-5c.87-.64,1.72-1.3,2.53-2a75.72,75.72,0,0,0,72.93,0c.81.68,1.66,1.34,2.53,2a68.52,68.52,0,0,1-10.45,5,78.27,78.27,0,0,0,6.63,10.85,105.73,105.73,0,0,0,31.42-18.83C129.87,49.65,123.63,26.83,107.7,8.07ZM42.45,65.69C36.18,65.69,31,60,31,53S36.18,40.36,42.45,40.36,53.83,46,53.83,53,48.72,65.69,42.45,65.69Zm42.24,0C78.41,65.69,73.24,60,73.24,53S78.41,40.36,84.69,40.36,96.07,46,96.07,53,91,65.69,84.69,65.69Z"/></svg>
+                    </a>
+                    <a href="https://tiktok.com/@nrwrp" target="_blank" class="social-icon-btn" title="Folge uns auf TikTok" aria-label="TikTok">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg>
+                    </a>
+                    <a href="https://instagram.com/nrwrp" target="_blank" class="social-icon-btn" title="Folge uns auf Instagram" aria-label="Instagram">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                    </a>
+                </div>
+
+                <button class="theme-toggle-btn" id="theme-toggle" aria-label="Farbschema umschalten">
+                    <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+                </button>
+
+                <button class="mobile-menu-btn" id="mobile-menu-toggle" aria-label="Menü öffnen">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main>
+        <div class="content-wrapper">
+            <section id="regelwerke" class="section">
+                <div class="section-header">
+                    <h2 class="section-title">Serverregelwerk</h2>
+                    <p class="section-subtitle">Ein faires Spiel beruht auf klaren Regeln. Bitte lies dir das Regelwerk aufmerksam durch.</p>
+                </div>
+
+                <div class="rules-container">
+                    <!-- Search Input -->
+                    <div class="rules-search-bar">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                        <input type="text" id="rules-search" placeholder="Regelwerk durchsuchen (z.B. RDM, VDM, Safezone, Geisel, Fraktion)...">
+                    </div>
+
+                    <!-- Category Tab Bar -->
+                    <div class="factions-tabs" style="margin-bottom: 2rem;">
+                        <button class="faction-tab-btn rule-tab-btn active" data-group="ingame">Ingame Regelwerk</button>
+                        <button class="faction-tab-btn rule-tab-btn" data-group="fraktion">Fraktions Regelwerk</button>
+                        <button class="faction-tab-btn rule-tab-btn" data-group="discord">Discord Regelwerk</button>
+                    </div>
+
+                    <!-- Accordion Groups -->
+                    <div class="rules-accordion" id="rules-accordion">
+                        
+                        <!-- ================= INGAME GROUP ================= -->
+                        <div class="rules-group" id="rules-group-ingame" style="display: flex; flex-direction: column; gap: 1rem;">
+                            
+                            <!-- Ingame Section 1: Allgemeine Regeln -->
+                            <div class="accordion-item" data-search-content="Allgemeine Regeln Ingame Roblox ToS Exploiting Bugusing Modding Respekt Extremismus Beleidigungen RDM VDM FailRP PowerRP Metagaming Combat Logging Fahrzeugnutzung Leben schützen RP-Flucht OOC IC Gambo Kick">
+                                <div class="accordion-header">
+                                    <div class="accordion-title">
+                                        <span class="rule-num">§1</span> Allgemeine Ingame-Regeln
+                                    </div>
+                                    <span class="accordion-icon">▼</span>
+                                </div>
+                                <div class="accordion-content">
+                                    <div class="accordion-inner">
+                                        <div class="rule-clause"><div class="rule-clause-title">1.0 Roblox ToS</div><div class="rule-clause-text">Es ist sich an die Roblox ToS zu halten!</div></div>
+                                        <div class="rule-clause"><div class="rule-clause-title">1.1 Unerlaubte Modifikationen</div><div class="rule-clause-text">Exploiting, Bugusing oder Modding ist strengstens verboten.</div></div>
+                                        <div class="rule-clause"><div class="rule-clause-title">1.2 Respekt</div><div class="rule-clause-text">Respektiere alle Spieler.</div></div>
+                                        <div class="rule-clause"><div class="rule-clause-title">1.3 Extremismus</div><div class="rule-clause-text">Jegliche Art von Extremismus ist strengstens untersagt!</div></div>
+                                        <div class="rule-clause"><div class="rule-clause-title">1.4 Umgangston</div><div class="rule-clause-text">Beleidigungen, Diskriminierung, Mobbing oder toxisches Verhalten ist verboten.</div></div>
+                                        <div class="rule-clause"><div class="rule-clause-title">1.5 Realismus</div><div class="rule-clause-text">Realistisches Verhalten ist Pflicht (Kein RDM, VDM, PowerRP, FailRP).</div></div>
+                                        <div class="rule-clause"><div class="rule-clause-title">1.6 VDM Definition</div><div class="rule-clause-text">Jemand zu an- oder überfahren ist nicht erlaubt und gilt als VDM.</div></div>
+                                        <div class="rule-clause"><div class="rule-clause-title">1.7 Metagaming</div><div class="rule-clause-text">Metagaming ist verboten.</div></div>
+                                        <div class="rule-clause"><div class="rule-clause-title">1.8 Combat Logging</div><div class="rule-clause-text">Bei einem RP-Szenario ist Ausloggen (Combat Logging) verboten.</div></div>
+                                        <div class="rule-clause"><div class="rule-clause-title">1.9 Fahrzeugnutzung</div><div class="rule-clause-text">Keine übertriebenen oder unrealistischen Fahrzeugnutzungen (z.B. mit einem Sportwagen in die Berge fliehen).</div></div>
+                                        <div class="rule-clause"><div class="rule-clause-title">2.0 Lebensschutz</div><div class="rule-clause-text">Das eigene Leben zu schützen hat höchste Priorität.</div></div>
+                                        <div class="rule-clause"><div class="rule-clause-title">2.1 RP-Flucht</div><div class="rule-clause-text">Keine RP-Flucht durch Disconnects, Respawns oder Fahrzeug-Despawn.</div></div>
+                                        <div class="rule-clause"><div class="rule-clause-title">2.2 Powergaming</div><div class="rule-clause-text">Zwingen anderer Charaktere zu Handlungen, ohne ihnen eine Reaktionsmöglichkeit zu geben, ist verboten.</div></div>
+                                        <div class="rule-clause"><div class="rule-clause-title">2.3 Metainformationen</div><div class="rule-clause-text">Informationen aus Voice-Chat, Stream, Discord oder Spielerlisten dürfen nicht für dein RP genutzt werden (Funks ausgeschlossen).</div></div>
+                                        <div class="rule-clause"><div class="rule-clause-title">2.4 New Life Rule</div><div class="rule-clause-text">Nach dem Tod eines Charakters darfst du keine Erinnerungen an das vorherige RP-Szenario behalten.</div></div>
+                                        <div class="rule-clause"><div class="rule-clause-title">2.5 Rückkehr zum Todesort</div><div class="rule-clause-text">Rückkehr zum Ort deines Todes ist erst nach 10 Minuten erlaubt.</div></div>
+                                        <div class="rule-clause"><div class="rule-clause-title">2.6 RP-Diskussionen</div><div class="rule-clause-text">Diskutieren von RP-Situationen erfolgt nur OOC, niemals IC.</div></div>
+                                        <div class="rule-clause"><div class="rule-clause-title">2.8 IC Beleidigungen</div><div class="rule-clause-text">Beleidigungen IC müssen angemessen und nicht extrem sein (keine RL-Drohungen).</div></div>
+                                        <div class="rule-clause"><div class="rule-clause-title">2.9 Power-RP Verletzungen</div><div class="rule-clause-text">Unrealistisches Verhalten (z.B. nach fünf Schüssen aufstehen und wegrennen) ist untersagt.</div></div>
+                                        <div class="rule-clause"><div class="rule-clause-title">3.0 VDM bei Verfolgungen</div><div class="rule-clause-text">VDM ist nur mit 15 km/h bei einer Polizei-Verfolgungsjagd erlaubt.</div></div>
+                                        <div class="rule-clause"><div class="rule-clause-title">3.1 Unfall-RP (Crash RP)</div><div class="rule-clause-text">Das Crash RP muss ab 30 km/h ausgespielt werden.</div></div>
+                                        <div class="rule-clause"><div class="rule-clause-title">3.2 Zielen auf Geiseln</div><div class="rule-clause-text">Sobald aktiv auf die Geisel gezielt wird, darf nicht mit der Sniper oder sonstiges ohne Vorwarnung geschossen werden.</div></div>
+                                        <div class="rule-clause"><div class="rule-clause-title">3.3 Drittpartei</div><div class="rule-clause-text">Drittpartei ist verboten.</div></div>
+                                        <div class="rule-clause"><div class="rule-clause-title">3.4 Ausnahme Drittpartei</div><div class="rule-clause-text">Die Polizei ist von der Regel 3.3 ausgenommen.</div></div>
+                                        <div class="rule-clause"><div class="rule-clause-title">3.5 Spawn-Abfangen & Rache</div><div class="rule-clause-text">Das Abfangen von Spielern vom Spawn für Geiselnahmen und das unnötigste Hinrichten von Spielern ist verboten.</div></div>
+                                        <div class="rule-clause"><div class="rule-clause-title">3.6 Gambo-RP</div><div class="rule-clause-text">Jegliches Gambo-RP wird sofort bestraft.</div></div>
+                                        <div class="rule-clause"><div class="rule-clause-title">3.7 Kick-Sperre</div><div class="rule-clause-text">Nach einem Kick darf erst nach 30 Minuten dem Server wieder beigetreten werden.</div></div>
+                                        <div class="rule-clause"><div class="rule-clause-title">3.8 Unwissenheit</div><div class="rule-clause-text">Unwissenheit schützt nicht vor Strafen!</div></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Ingame Section 2: Safezones & Sonderregeln Safezones -->
+                            <div class="accordion-item" data-search-content="Safezones Spawns Polizeiwache Feuerwehrwachen ADAC Gebäude Staff Gebäude Krankenhaus Flucht Safezone-Abuse Gewaltanwendung Angriffe Drohnen Modcall">
+                                <div class="accordion-header">
+                                    <div class="accordion-title">
+                                        <span class="rule-num">§2</span> Safezones (Sicherheitszonen)
+                                    </div>
+                                    <span class="accordion-icon">▼</span>
+                                </div>
+                                <div class="accordion-content">
+                                    <div class="accordion-inner">
+                                        <div class="rule-clause">
+                                            <div class="rule-clause-title">Festgelegte Safezones</div>
+                                            <div class="rule-clause-text">
+                                                Safezones sind:<br>
+                                                - Beide Spawns<br>
+                                                - Polizeiwache<br>
+                                                - Beide Feuerwehrwachen<br>
+                                                - ADAC Gebäude<br>
+                                                - Staff Gebäude<br>
+                                                - Krankenhaus
+                                            </div>
+                                        </div>
+                                        <div class="rule-clause"><div class="rule-clause-title">1.0 Safezone-Abuse</div><div class="rule-clause-text">Flucht in eine Safezone, um RP zu entkommen ("Safezone-Abuse"), ist verboten.</div></div>
+                                        <div class="rule-clause"><div class="rule-clause-title">1.1 Kriminalitätsverbot</div><div class="rule-clause-text">Kriminelle Anwendungen oder Gewaltanwendung sind in einer Safezone verboten.</div></div>
+                                        <div class="rule-clause"><div class="rule-clause-title">1.2 Auflösung bei Flucht</div><div class="rule-clause-text">Bei einer Flucht in die Safezone wird die Regel 1.1 (Gewaltverbot) für diese Situation aufgehoben (Safezone aufgelöst).</div></div>
+                                        <div class="rule-clause"><div class="rule-clause-title">1.3 Angriffe aus Safezone</div><div class="rule-clause-text">Angriffe von Spielern aus einer Safezone heraus (z.B. Schießen auf jemanden außerhalb der Safezone) sind verboten.</div></div>
+                                        <div class="rule-clause"><div class="rule-clause-title">1.4 Aggressive Fahrzeugnutzung</div><div class="rule-clause-text">Fahrzeuge dürfen in Safezones nicht für aggressive Handlungen genutzt werden (z.B. Rammen).</div></div>
+                                        <div class="rule-clause"><div class="rule-clause-title">1.5 Drohnenverbot & Modcalls</div><div class="rule-clause-text">Das Verwenden von Drohnen in der Safezone und in einem Modcall ist verboten!</div></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Ingame Section 3: Avatare & Schusscall-Regelungen -->
+                            <div class="accordion-item" data-search-content="Avatare Schusscall Realistisch Tiere Köln Kleidung Extremismus Militär skins 5 Minuten 5 Sekunden Reaktionszeit Bedrohen Panik button Zielen RDM Hände hoch">
+                                <div class="accordion-header">
+                                    <div class="accordion-title">
+                                        <span class="rule-num">§3</span> Avatare & Schusscall-Regelung
+                                    </div>
+                                    <span class="accordion-icon">▼</span>
+                                </div>
+                                <div class="accordion-content">
+                                    <div class="accordion-inner">
+                                        <div class="rule-clause">
+                                            <div class="rule-clause-title">Avatar-Regeln</div>
+                                            <div class="rule-clause-text">
+                                                <strong>1.0 Realismus:</strong> Das Avatar muss realistisch bleiben.<br>
+                                                <strong>1.1 Exotische Tiere:</strong> Tiere, die es nicht in Köln gibt, sind verboten.<br>
+                                                <strong>1.2 Politische Kleidung:</strong> Linksextremistische und rechtsextremistische Kleidungen sind strengstens verboten.<br>
+                                                <strong>1.3 Militär:</strong> Militärskins sind verboten.
+                                            </div>
+                                        </div>
+                                        <div class="rule-clause"><div class="rule-clause-title">1.0 Schusscall Gültigkeit</div><div class="rule-clause-text">Ein Schusscall gilt 5 Minuten lang!</div></div>
+                                        <div class="rule-clause"><div class="rule-clause-title">1.1 Reaktionszeit</div><div class="rule-clause-text">Man muss 5 Sekunden Reaktionszeit geben!</div></div>
+                                        <div class="rule-clause"><div class="rule-clause-title">1.2 Automatischer Schusscall</div><div class="rule-clause-text">Wenn eine Person auf eine andere zielt, hat diese automatisch einen Schusscall auf die Person, auf die gezielt wird!</div></div>
+                                        <div class="rule-clause"><div class="rule-clause-title">1.3 Panik-Button Sperre</div><div class="rule-clause-text">Sobald man jemanden mit einer Waffe bedroht, darf man keinen Panik- oder sonstigen Button mehr drücken!</div></div>
+                                        <div class="rule-clause"><div class="rule-clause-title">1.4 Ausführung</div><div class="rule-clause-text">Wenn man 5 Sekunden gezielt hat und einen Schusscall gegeben hat, darf man die Person erschießen, wenn sie nicht die Aufforderung befolgt!</div></div>
+                                        <div class="rule-clause"><div class="rule-clause-title">1.5 Nähe-Einhaltung</div><div class="rule-clause-text">Ein Schusscall muss in der Nähe eines anderen Spielers gemacht werden, wenn nicht, zählt es zu RDM.</div></div>
+                                        <div class="rule-clause"><div class="rule-clause-title">1.6 Ungültige Phrasen</div><div class="rule-clause-text">"-Zw-" ist kein gültiger Schusscall, nur (Bsp.) "Hände hoch oder ich schieße!".</div></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Ingame Section 4: Überfälle & Geiselnahmen -->
+                            <div class="accordion-item" data-search-content="Überfälle ATM Geiselnahme Verhandlung Geisel Geld Staatsbeamte Limit Polizei stürmen Tausch Cooldown">
+                                <div class="accordion-header">
+                                    <div class="accordion-title">
+                                        <span class="rule-num">§4</span> Überfälle & Geiselnahmen
+                                    </div>
+                                    <span class="accordion-icon">▼</span>
+                                </div>
+                                <div class="accordion-content">
+                                    <div class="accordion-inner">
+                                        <div class="rule-clause"><div class="rule-clause-title">1.0 Geisel-Zusatzverbot</div><div class="rule-clause-text">Während einer Geiselnahme dürfen keine weiteren Personen als Geisel genommen werden.</div></div>
+                                        <div class="rule-clause"><div class="rule-clause-title">1.1 ATM-Überfälle</div><div class="rule-clause-text">ATM-Überfälle dürfen von jedem gemacht werden!</div></div>
+                                        <div class="rule-clause"><div class="rule-clause-title">1.2 Stürmung bei Gewalt</div><div class="rule-clause-text">Sollte während einer Verhandlung eine Geisel getötet werden, darf die Polizei das Gebäude stürmen.</div></div>
+                                        <div class="rule-clause"><div class="rule-clause-title">1.3 Geldforderung Limit</div><div class="rule-clause-text">Als Tausch gegen die Geisel darf Geld im Wert von maximal 30 Tausend Euro verlangt werden.</div></div>
+                                        <div class="rule-clause"><div class="rule-clause-title">1.4 Höhere Beamte</div><div class="rule-clause-text">Bei höheren Personen (z.B. der Polizeipräsident) darf mehr Geld, aber auch nicht unverhältnismäßig viel Geld gefordert werden.</div></div>
+                                        <div class="rule-clause"><div class="rule-clause-title">1.5 Ping-Pong Verhandlungsprinzip</div><div class="rule-clause-text">Eine Verhandlung muss nach dem Ping-Pong-Prinzip erfolgen, d.h. eine Seite darf sich nicht auf die erste Forderung festfahren, es muss auf die andere Seite eingegangen werden!</div></div>
+                                        <div class="rule-clause"><div class="rule-clause-title">1.6 Illegale Gegenstände</div><div class="rule-clause-text">Es dürfen keine illegalen Gegenstände gefordert werden.</div></div>
+                                        <div class="rule-clause"><div class="rule-clause-title">1.7 Beamten- & Geisellimits</div><div class="rule-clause-text">Bei einer Geiselnahme müssen mindestens 2 Medics und 5 Polizisten online sein (Geiseln ausgenommen). Geisellimit: Maximal 5 Geiseln oder 3 Staatsbeamte.</div></div>
+                                        <div class="rule-clause"><div class="rule-clause-title">1.8 Geiselnahme Cooldown</div><div class="rule-clause-text">Nach einer Geiselnahme darf man nicht wieder in einem Zeitraum von 10 Minuten eine Geisel nehmen.</div></div>
+                                        <div class="rule-clause"><div class="rule-clause-title">1.9 Maximale Geiselzeit</div><div class="rule-clause-text">Eine Geisel darf man nur für 25 Minuten im Besitz haben. Danach muss diese getötet oder freigelassen werden.</div></div>
+                                        <div class="rule-clause"><div class="rule-clause-title">2.0 Verhandlungsverweigerung</div><div class="rule-clause-text">Falls es zu keiner Verhandlung kommt (Geiselnehmer verhandeln nicht oder sind unkooperativ), darf die Polizei stürmen. Jedoch müssen sie dies vorher ankündigen.</div></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Ingame Section 5: Staatsbeamte (Polizei, Rettungsdienst, Feuerwehr) -->
+                            <div class="accordion-item" data-search-content="Polizei Uniform Lackierung Livery SWAT Weste Beanbag Korruption Ordnungsamt Blaulicht Cuff Rettungsdienst Feuerwehr EMS Notruf Wunderheilung medic Tot erklären Fire Horse respawn">
+                                <div class="accordion-header">
+                                    <div class="accordion-title">
+                                        <span class="rule-num">§5</span> Regeln für Staatsbeamte (Polizei, Rettungsdienst & Feuerwehr)
+                                    </div>
+                                    <span class="accordion-icon">▼</span>
+                                </div>
+                                <div class="accordion-content">
+                                    <div class="accordion-inner">
+                                        <div class="rule-clause">
+                                            <div class="rule-clause-title">Polizei-Regeln (PD)</div>
+                                            <div class="rule-clause-text">
+                                                <strong>1.0 Ausrüstung:</strong> Man MUSS die passende Livery/Uniform auswählen.<br>
+                                                <strong>1.1 SWAT Ausrüstung:</strong> Die SWAT Weste und der SWAT Helm sind verboten.<br>
+                                                <strong>1.2 Beanbag:</strong> Die Beanbag ist ebenfalls verboten.<br>
+                                                <strong>1.3 Korruption:</strong> Korruption ist strengstens untersagt!<br>
+                                                <strong>1.4 Ordnungsamt Anhaltungen:</strong> Das Ordnungsamt darf keine Personen anhalten.<br>
+                                                <strong>1.5 Ordnungsamt Lichter:</strong> Das Ordnungsamt darf nicht mit Blaulicht oder Gelblicht herumfahren.<br>
+                                                <strong>1.6 Festnahme-Chat:</strong> Wenn man als Polizist eine Person verhaftet hat, muss man „Cuff“ schreiben – innerhalb von 5 Sekunden!
+                                            </div>
+                                        </div>
+                                        <div class="rule-clause">
+                                            <div class="rule-clause-title">Rettungsdienst & Feuerwehr (EMS/FD)</div>
+                                            <div class="rule-clause-text">
+                                                <strong>1.0 Lackierung:</strong> Man muss immer die passende Lackierung wählen!<br>
+                                                <strong>1.1 Uniform:</strong> Man muss immer die passende Uniform tragen!<br>
+                                                <strong>1.2 Notrufe:</strong> Notrufe von echten Spielern haben immer Vorrang!<br>
+                                                <strong>1.3 Notfalleinsätze:</strong> Bei einem EMS-Anruf sollten Notarzt und RTW anfahren!<br>
+                                                <strong>1.4 Wunderheilung:</strong> Die Wunderheilung ist untersagt – man muss das Medic-RP immer richtig von beiden Parteien ausspielen!<br>
+                                                <strong>1.5 Todeserklärung:</strong> Nur der Medic darf eine Person als tot erklären!<br>
+                                                <strong>1.5 Feuerwehr-Ausrüstung:</strong> Das Simple Fire Hose ist bei der Feuerwehr verboten!<br>
+                                                <strong>1.6 Korruptionsverbot:</strong> Korruption ist verboten!<br>
+                                                <strong>1.7 Missbrauch von Absperrung:</strong> Das Ausnutzen der Kegel oder weiterer Gegenstände ist untersagt!<br>
+                                                <strong>1.8 Respawn-Regelung:</strong> Sollte man sterben und kein Sanitäter ist da oder keine aktive RP-Situation mehr da sein, kann man sich nach 5 Minuten respawnen!
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Ingame Section 6: Sonderregelungen & Support -->
+                            <div class="accordion-item" data-search-content="Sonderregeln Staff Team Demo-RP Clip Beweis Zeugen Diskussion Helikopter Geiselnahme Instant Jailen Feuermelder Panic Button Scanner Mod-Call Sniper Entfernung">
+                                <div class="accordion-header">
+                                    <div class="accordion-title">
+                                        <span class="rule-num">§6</span> Sonderregeln & Supportablauf
+                                    </div>
+                                    <span class="accordion-icon">▼</span>
+                                </div>
+                                <div class="accordion-content">
+                                    <div class="accordion-inner">
+                                        <div class="rule-clause"><div class="rule-clause-title">1.0 Staff-Imitierung</div><div class="rule-clause-text">Sich als jemand aus dem Staff Team auszugeben ist strengstens untersagt.</div></div>
+                                        <div class="rule-clause"><div class="rule-clause-title">1.1 Demo-RP</div><div class="rule-clause-text">Demo-RP ist erlaubt, solange es im Roleplay-Kontext bleibt. IC-Handlungen oder Aussagen gelten nicht als Regelverstoß, solange keine gezielte OOC-Beleidigung, Diskriminierung oder Belästigung eines Spielers stattfindet.</div></div>
+                                        <div class="rule-clause"><div class="rule-clause-title">1.2 Beweis-Clip Pflicht</div><div class="rule-clause-text">Regelbrüche können nur mit einem Video-Clip bewiesen werden.</div></div>
+                                        <div class="rule-clause"><div class="rule-clause-title">1.3 Zeugenaussagen</div><div class="rule-clause-text">Zeugen zählen nicht als Beweis bei einem Regelbruch.</div></div>
+                                        <div class="rule-clause"><div class="rule-clause-title">1.4 Staff-Diskussionen</div><div class="rule-clause-text">Mit einem Staffler zu diskutieren ist verboten.</div></div>
+                                        <div class="rule-clause"><div class="rule-clause-title">1.5 Helikopter-Anforderung</div><div class="rule-clause-text">Ein Helikopter darf in Abständen von 15 Minuten gerufen werden.</div></div>
+                                        <div class="rule-clause"><div class="rule-clause-title">1.6 Geisel-Schutzgruppe</div><div class="rule-clause-text">Das Medic-Team sowie alle Unterabteilungen vom Medic und der ADAC dürfen nicht als Geisel genommen werden!</div></div>
+                                        <div class="rule-clause"><div class="rule-clause-title">1.7 Arrestierungs-Ablauf (Instant Jailen)</div><div class="rule-clause-text">Instant Jailen ist verboten. Man muss die Person immer zum Gefängnis fahren und an der Zelle jailen.</div></div>
+                                        <div class="rule-clause"><div class="rule-clause-title">1.8 Fehlalarm (Feuermelder)</div><div class="rule-clause-text">Den Feuermelder ohne RP-Hintergrund zu betätigen ist verboten und zählt zu Baiting!</div></div>
+                                        <div class="rule-clause"><div class="rule-clause-title">1.9 Panic Button</div><div class="rule-clause-text">Der Panic Button ist nur bei Notfällen erlaubt zu drücken!</div></div>
+                                        <div class="rule-clause"><div class="rule-clause-title">2.0 Scannerverbot</div><div class="rule-clause-text">Die Verwendung des Scanners ist verboten!</div></div>
+                                        <div class="rule-clause"><div class="rule-clause-title">2.1 Mod-Call Ablauf</div><div class="rule-clause-text">Der Mod-Call fängt erst an, wenn der Staffler da ist. Sobald der Mod da ist, muss man dort bleiben und darf nicht weggehen.</div></div>
+                                        <div class="rule-clause"><div class="rule-clause-title">2.2 Medic/ADAC beschießen</div><div class="rule-clause-text">Man darf ADACler // FDler umschießen, NUR wenn es einen richtigen RP-Hintergrund gibt.</div></div>
+                                        <div class="rule-clause"><div class="rule-clause-title">2.3 Sniper Entfernung</div><div class="rule-clause-text">Die Sniper darf erst ab 175 Studs Entfernung benutzt werden!</div></div>
+                                        <div class="rule-clause"><div class="rule-clause-title">2.4 Regel-Akzeptanz</div><div class="rule-clause-text">Beim Beitreten des IC Servers akzeptierst du automatisch die Regeln.</div></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- ================= FRAKTION GROUP ================= -->
+                        <div class="rules-group" id="rules-group-fraktion" style="display: none; flex-direction: column; gap: 1rem;">
+                            
+                            <!-- Fraktion Section 1: Allgemeine Fraktionsregeln -->
+                            <div class="accordion-item" data-search-content="Allgemeine Fraktionsregeln Inaktivität Warns Auflösung Departments Bewerbung Gang Projektleitung Administrator Strike Beantragen Name">
+                                <div class="accordion-header">
+                                    <div class="accordion-title">
+                                        <span class="rule-num">§1</span> Allgemeine Fraktionsregeln
+                                    </div>
+                                    <span class="accordion-icon">▼</span>
+                                </div>
+                                <div class="accordion-content">
+                                    <div class="accordion-inner">
+                                        <div class="rule-clause"><div class="rule-clause-title">1.0 Inaktivität</div><div class="rule-clause-text">Wenn eine Fraktion nach 2 Wochen inaktiv ist, bekommt diese einen Fraktionswarn.</div></div>
+                                        <div class="rule-clause"><div class="rule-clause-title">1.1 Department Schutz</div><div class="rule-clause-text">Departments sind vor der Auflösung geschützt.</div></div>
+                                        <div class="rule-clause"><div class="rule-clause-title">1.2 Bewerbungssperre</div><div class="rule-clause-text">Eine abgelehnte Fraktionsbewerbung zieht eine Sperre von 7 Tagen nach sich.</div></div>
+                                        <div class="rule-clause"><div class="rule-clause-title">1.3 Auflösung</div><div class="rule-clause-text">Nachdem eine Fraktion 3 Fraktionswarns hat, wird diese aufgelöst.</div></div>
+                                        <div class="rule-clause"><div class="rule-clause-title">1.4 Leitungslimit</div><div class="rule-clause-text">Man darf nur eine Fraktion/Department leiten.</div></div>
+                                        <div class="rule-clause"><div class="rule-clause-title">1.5 Gang-Besitz</div><div class="rule-clause-text">Man darf nur eine Gang besitzen.</div></div>
+                                        <div class="rule-clause"><div class="rule-clause-title">1.6 Rechte-Struktur & Projektleitung</div><div class="rule-clause-text">Sobald eine Fraktion gegründet wird, bekommen alle Personen vom Fraktions-Management eine Fraktionsmanagement-Rolle, die Administrator-Rechte besitzt. Veyko und Berkay bekommen die Rolle 'NRWGRP I Projektleitung', die Administrator-Rechte besitzt, welche die höchste Rolle ist. Der FM-Bot mit Administrator-Rechten ist dem Fraktions-Management unterstellt.</div></div>
+                                        <div class="rule-clause"><div class="rule-clause-title">1.7 Fraktionsstrikes</div><div class="rule-clause-text">Sobald 3 Leute oder mehr aus einer Fraktion gegen das normale oder das Fraktions-Regelwerk verstoßen, erhält die Fraktion einen Fraktionsstrike.</div></div>
+                                        <div class="rule-clause"><div class="rule-clause-title">1.8 Gang-Gründung</div><div class="rule-clause-text">Ab 2 Personen darf eine Gang beantragt werden.</div></div>
+                                        <div class="rule-clause"><div class="rule-clause-title">1.9 Identitäts-Täuschung</div><div class="rule-clause-text">Man darf sich nicht als eine andere Fraktion ausgeben.</div></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Fraktion Section 2: Illegale Fraktionsregeln -->
+                            <div class="accordion-item" data-search-content="Illegale Fraktionen Mitgliedschaft Gang Struktur Autofarbe Kennzeichen Name Schusscall Ganggebiet Mitglieder Razzia">
+                                <div class="accordion-header">
+                                    <div class="accordion-title">
+                                        <span class="rule-num">§2</span> Illegale Fraktionsregeln
+                                    </div>
+                                    <span class="accordion-icon">▼</span>
+                                </div>
+                                <div class="accordion-content">
+                                    <div class="accordion-inner">
+                                        <div class="rule-clause"><div class="rule-clause-title">1.0 Exklusivität</div><div class="rule-clause-text">Man darf nur in einer illegalen Fraktion sein.</div></div>
+                                        <div class="rule-clause"><div class="rule-clause-title">1.1 Genehmigungspflicht</div><div class="rule-clause-text">Alle Gangs müssen von der Serverleitung genehmigt und offiziell eingetragen sein.</div></div>
+                                        <div class="rule-clause"><div class="rule-clause-title">1.2 Gang-Struktur</div><div class="rule-clause-text">Eine Gang muss eine klare Struktur haben (Leader, Co-Leader, Mitglieder).</div></div>
+                                        <div class="rule-clause"><div class="rule-clause-title">1.3 Erkennungsmerkmale</div><div class="rule-clause-text">Eine Fraktion muss zusammen dieselbe Autofarbe und dasselbe Kennzeichen haben, und muss klar gekennzeichnet sein.</div></div>
+                                        <div class="rule-clause"><div class="rule-clause-title">1.4 RP-Namenspräfix</div><div class="rule-clause-text">Man muss in seinem Roleplay-Namen den Gang-Namen und dann seinen richtigen Roleplay-Namen eingeben (Bsp. Bloods I Veyko).</div></div>
+                                        <div class="rule-clause"><div class="rule-clause-title">1.5 Revier-Schusscall</div><div class="rule-clause-text">Die Gangler haben einen automatischen Schusscall bei ihrem Ganggebiet.</div></div>
+                                        <div class="rule-clause"><div class="rule-clause-title">1.6 Mitgliederlimit</div><div class="rule-clause-text">Jede kriminelle Fraktion darf maximal 8 aktive Mitglieder stellen (Ausnahme: Es gibt eine Razzia, dann darf die illegale Fraktion mit maximal 12 Mitgliedern agieren). Neutrale Gruppierungen sind auf maximal 3 aggressiv auftretende Mitglieder beschränkt.</div></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Fraktion Section 3: Krieg zwischen Fraktionen -->
+                            <div class="accordion-item" data-search-content="Krieg kriminell Schusscall Hintergrund Genehmigung Schutzzeit City Safezone Disqualifikation Tage Runden Sieger">
+                                <div class="accordion-header">
+                                    <div class="accordion-title">
+                                        <span class="rule-num">§3</span> Kriege zwischen Fraktionen
+                                    </div>
+                                    <span class="accordion-icon">▼</span>
+                                </div>
+                                <div class="accordion-content">
+                                    <div class="accordion-inner">
+                                        <div class="rule-clause"><div class="rule-clause-title">1.1 Kriegsteilnahme</div><div class="rule-clause-text">Kriege sind ausschließlich kriminellen Fraktionen vorbehalten.</div></div>
+                                        <div class="rule-clause"><div class="rule-clause-title">1.2 Automatischer Schusscall</div><div class="rule-clause-text">Bei einem Krieg haben beide Parteien einen automatischen Schusscall.</div></div>
+                                        <div class="rule-clause"><div class="rule-clause-title">1.3 Genehmigung</div><div class="rule-clause-text">Ein Krieg darf nur mit einem plausiblen RP-Hintergrund und nach Genehmigung durch die Fraktionsverwaltung erfolgen.</div></div>
+                                        <div class="rule-clause"><div class="rule-clause-title">1.4 Schutzzeit</div><div class="rule-clause-text">Neu gegründete Fraktionen genießen eine Schutzzeit von 3 Tagen und dürfen in dieser Zeit nicht in Kriege verwickelt werden.</div></div>
+                                        <div class="rule-clause"><div class="rule-clause-title">1.5 Ein-Gegner-Limit</div><div class="rule-clause-text">Eine Fraktion darf immer nur eine andere Fraktion gleichzeitig in den Krieg verwickeln.</div></div>
+                                        <div class="rule-clause"><div class="rule-clause-title">1.6 City-Sicherheitszone</div><div class="rule-clause-text">Es darf nicht in der City geschossen werden. Das heißt, die City ist im Krieg sowas wie eine inoffizielle Safezone.</div></div>
+                                        <div class="rule-clause"><div class="rule-clause-title">1.7 Disqualifikation</div><div class="rule-clause-text">Wer sich nicht an die inoffizielle Safezone hält, wird vom Krieg disqualifiziert.</div></div>
+                                        <div class="rule-clause"><div class="rule-clause-title">1.8 Kriegsdauer & Wertung</div><div class="rule-clause-text">Der Krieg dauert nur 2 Tage. Am ersten Tag darf geschossen werden und am zweiten Tag wird es durch mehrere Runden entschieden. Die Fraktionsverwaltung hat das Recht zu entscheiden, wer der Sieger ist.</div></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Fraktion Section 4: Razzia-Regelungen -->
+                            <div class="accordion-item" data-search-content="Razzia Genehmigung Bestätigung Fraktionsverwaltung Polizei Leitung Vorbereitungszeit Schusscall Strafe Limit">
+                                <div class="accordion-header">
+                                    <div class="accordion-title">
+                                        <span class="rule-num">§4</span> Razzia-Regeln
+                                    </div>
+                                    <span class="accordion-icon">▼</span>
+                                </div>
+                                <div class="accordion-content">
+                                    <div class="accordion-inner">
+                                        <div class="rule-clause">
+                                            <div class="rule-clause-title">1.0 Razzia-Genehmigungen</div>
+                                            <div class="rule-clause-text">
+                                                Eine Razzia darf nur stattfinden, wenn sie von folgenden Parteien bestätigt wurde:<br>
+                                                - Fraktionsverwaltung<br>
+                                                - Leitung der betroffenen Fraktion<br>
+                                                - Polizei-Leitung<br>
+                                                Ohne diese Genehmigungen ist die Razzia nicht erlaubt.
+                                            </div>
+                                        </div>
+                                        <div class="rule-clause"><div class="rule-clause-title">1.1 Vorbereitungszeit</div><div class="rule-clause-text">Nach Genehmigung einer Razzia haben alle beteiligten Parteien bis zu 24 Stunden Zeit, sich auf die Razzia vorzubereiten.</div></div>
+                                        <div class="rule-clause"><div class="rule-clause-title">1.2 Automatischer Schusscall</div><div class="rule-clause-text">Bei einer Razzia haben beide Parteien einen automatischen Schusscall.</div></div>
+                                        <div class="rule-clause"><div class="rule-clause-title">1.3 Regelverstöße</div><div class="rule-clause-text">Falls es zu Verstößen kommt, müssen die beteiligten Spieler mit einer Strafe rechnen.</div></div>
+                                        <div class="rule-clause"><div class="rule-clause-title">1.4 Razzien-Tageslimit</div><div class="rule-clause-text">Pro Tag dürfen maximal 2 Razzien stattfinden. Gegen dieselbe Fraktion dürfen maximal 2 Razzien pro Tag durchgeführt werden.</div></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Fraktion Section 5: Discord & Nachweise -->
+                            <div class="accordion-item" data-search-content="Discord Server Einreichen OOC Vorteil Aktivitäten Nachweise Logs Duty Einstellen Beförderung">
+                                <div class="accordion-header">
+                                    <div class="accordion-title">
+                                        <span class="rule-num">§5</span> Discord-Server & Nachweise
+                                    </div>
+                                    <span class="accordion-icon">▼</span>
+                                </div>
+                                <div class="accordion-content">
+                                    <div class="accordion-inner">
+                                        <div class="rule-clause"><div class="rule-clause-title">1.1 Offizieller Server</div><div class="rule-clause-text">Jede Fraktion muss einen offiziellen Discord-Server einreichen.</div></div>
+                                        <div class="rule-clause"><div class="rule-clause-title">1.2 OOC-Vorteilsverbot</div><div class="rule-clause-text">Private Discords dürfen nicht als OOC-Vorteil im RP genutzt werden.</div></div>
+                                        <div class="rule-clause"><div class="rule-clause-title">1.3 Aktivitätsnachweis</div><div class="rule-clause-text">Illegale sowie legale Fraktionen müssen ihre Aktivitäten nachweisen können (Bsp. ein Channel, wo On-Duty-Logs gespeichert werden).</div></div>
+                                        <div class="rule-clause"><div class="rule-clause-title">1.4 Rekrutierung</div><div class="rule-clause-text">Es ist verboten, Leute einfach so anzustellen ohne Bewerbung (Ausnahme in der Bewerbungsphase).</div></div>
+                                        <div class="rule-clause"><div class="rule-clause-title">1.5 Beförderungszeiten (Uprank)</div><div class="rule-clause-text">Es muss auf eine gewisse Uprank-Zeit geachtet werden.</div></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- ================= DISCORD GROUP ================= -->
+                        <div class="rules-group" id="rules-group-discord" style="display: none; flex-direction: column; gap: 1rem;">
+                            
+                            <!-- Discord Section 1: Allgemeine Discord Regeln -->
+                            <div class="accordion-item" data-search-content="Allgemeine Discord Regeln ToS Spamen Rassismus Antisemitismus Freundlichkeit Respekt Private Daten Telefonnummern Aufnahme Stimme Einverständnis Channel-hopping Avatare Pornographie Werbung Pingen Politik">
+                                <div class="accordion-header">
+                                    <div class="accordion-title">
+                                        <span class="rule-num">§1</span> Allgemeine Discord-Regeln
+                                    </div>
+                                    <span class="accordion-icon">▼</span>
+                                </div>
+                                <div class="accordion-content">
+                                    <div class="accordion-inner">
+                                        <div class="rule-clause"><div class="rule-clause-title">1.0 Discord ToS</div><div class="rule-clause-text">Es wird sich jederzeit an die Discord ToS gehalten.</div></div>
+                                        <div class="rule-clause"><div class="rule-clause-title">1.1 Spam-Verbot</div><div class="rule-clause-text">Spamen in jeder Art ist verboten.</div></div>
+                                        <div class="rule-clause"><div class="rule-clause-title">1.2 Diskriminierung</div><div class="rule-clause-text">Rassismus und Antisemitismus in jeglicher Form wird nicht geduldet.</div></div>
+                                        <div class="rule-clause"><div class="rule-clause-title">1.3 Freundlichkeit</div><div class="rule-clause-text">Freundlichkeit hat höchste Priorität.</div></div>
+                                        <div class="rule-clause"><div class="rule-clause-title">1.4 Umgangston</div><div class="rule-clause-text">Beleidigungen und respektloses Verhalten gegenüber anderen Nutzern ist untersagt!</div></div>
+                                        <div class="rule-clause"><div class="rule-clause-title">1.5 Datenschutz</div><div class="rule-clause-text">Private Daten wie Telefonnummern, Adressen, Passwörter und Ähnliches dürfen nicht öffentlich ausgetauscht werden. Ein Teammitglied wird zu keinem Zeitpunkt nach sensiblen Daten fragen.</div></div>
+                                        <div class="rule-clause"><div class="rule-clause-title">1.6 Regel-Akzeptanz</div><div class="rule-clause-text">Unwissenheit schützt nicht vor Strafe.</div></div>
+                                        <div class="rule-clause"><div class="rule-clause-title">1.7 Stimmenaufnahme</div><div class="rule-clause-text">Unter keinen Umständen darf die Stimme anderer User ohne deren Einverständnis in einem Clip/Video geteilt werden.</div></div>
+                                        <div class="rule-clause"><div class="rule-clause-title">1.8 Channel-hopping</div><div class="rule-clause-text">Channel-hopping (ständiges Springen von dem einen in den anderen Channel) ist verboten.</div></div>
+                                        <div class="rule-clause"><div class="rule-clause-title">1.9 Profil-Inhalte</div><div class="rule-clause-text">Avatare dürfen keine pornographischen, rassistischen, beleidigenden oder andere gegen das deutsche Recht verstoßenden Inhalte beinhalten.</div></div>
+                                        <div class="rule-clause"><div class="rule-clause-title">2.0 Fremdwerbung</div><div class="rule-clause-text">Fremdwerbung jeglicher Art ist strengstens untersagt!</div></div>
+                                        <div class="rule-clause"><div class="rule-clause-title">2.1 Spam-Pings</div><div class="rule-clause-text">Das Spamm-Pingen von anderen Benutzern ist untersagt.</div></div>
+                                        <div class="rule-clause"><div class="rule-clause-title">2.2 Politische Inhalte</div><div class="rule-clause-text">Politische Inhalte und Diskussionen sind auf diesem Server verboten.</div></div>
+                                        <div class="rule-clause"><div class="rule-clause-title">2.3 Serverbeitritt</div><div class="rule-clause-text">Durch das Beitreten dieses Servers akzeptieren Sie automatisch diese Regeln.</div></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Global Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-info">
+                <div class="footer-logo">
+                    <img src="../Bilder/p4d93rk-removebg-preview.png" alt="NRW RP Logo">
+                    <div class="footer-logo-text">NRW RP</div>
+                </div>
+                <p class="footer-desc">Wir bieten leidenschaftliches, strukturiertes und realistisches deutsches Roleplay auf Basis von ERLC Roblox.</p>
+                <div class="footer-socials">
+                    <a href="https://discord.gg/nrw-rp" target="_blank" class="social-icon-btn" title="Discord" aria-label="Discord">💬</a>
+                    <a href="https://tiktok.com/@nrwrp" target="_blank" class="social-icon-btn" title="TikTok" aria-label="TikTok">🎵</a>
+                    <a href="https://instagram.com/nrwrp" target="_blank" class="social-icon-btn" title="Instagram" aria-label="Instagram">📸</a>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-col">
+                <h4>Navigation</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Startseite</a></li>
+                    <li><a href="infos.html">Infos</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="fuehrung.html">Führung</a></li>
+                </ul>
+            </div>
+
+            <!-- Support Links -->
+            <div class="footer-col">
+                <h4>Regeln & Support</h4>
+                <ul class="footer-links">
+                    <li><a href="regelwerke.html">Regelwerke</a></li>
+                    <li><a href="login.html">Staff Portal</a></li>
+                    <li><a href="https://discord.gg/nrw-rp" target="_blank">Discord Ticket</a></li>
+                </ul>
+            </div>
+
+            <!-- Server Details -->
+            <div class="footer-col">
+                <h4>Server Details</h4>
+                <ul class="footer-links">
+                    <li>Roblox Game: ERLC</li>
+                    <li>Server-Code: <span style="font-weight: 700; color: var(--accent);">NRW-RP</span></li>
+                    <li>Sprache: Deutsch</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 NRW RP Community. Alle Rechte vorbehalten. Privatprojekt, keine Verbindung zu Roblox Corp.</p>
+            <div class="footer-bottom-links">
+                <a href="impressum.html">Impressum</a>
+                <a href="impressum.html">Datenschutz</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

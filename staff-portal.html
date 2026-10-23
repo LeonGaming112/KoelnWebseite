@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staff Portal | NRW RP</title>
+    <meta name="description" content="Der interne Verwaltungsbereich für das Support- und Administrations-Team von NRW RP.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="staff-portal-melonly.css">
+    <link rel="shortcut icon" href="../Bilder/p4d93rk-removebg-preview.png" type="image/x-icon">
+</head>
+<body>
+    <!-- Theme Flash Prevention Script -->
+    <script>
+        if (localStorage.getItem('theme') === 'dark') {
+            document.body.classList.add('dark-theme');
+        }
+    </script>
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo-section">
+                <img src="../Bilder/p4d93rk-removebg-preview.png" alt="NRW RP Logo">
+                <div class="logo-text">
+                    NRW RP
+                    <span>Roblox ERLC Server</span>
+                </div>
+            </a>
+
+            <!-- Navigation Links -->
+            <nav class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link" data-page="home">Startseite</a>
+                <a href="infos.html" class="nav-link" data-page="infos">Infos</a>
+                <a href="news.html" class="nav-link" data-page="news">News</a>
+                <a href="fuehrung.html" class="nav-link" data-page="führung">Führung</a>
+                <a href="regelwerke.html" class="nav-link" data-page="regelwerke">Regelwerke</a>
+                <a href="staff-portal.html" class="nav-link active" data-page="login">Staff Portal</a>
+            </nav>
+
+            <!-- Actions (Theme Toggle & Social Links) -->
+            <div class="header-actions">
+                <div class="social-icons-header">
+                    <a href="https://discord.gg/nrw-rp" target="_blank" class="social-icon-btn" title="Tritt unserem Discord bei" aria-label="Discord">
+                        <svg width="20" height="20" viewBox="0 0 127.14 96.36" fill="currentColor"><path d="M107.7,8.07A105.15,105.15,0,0,0,77.26,0a77.19,77.19,0,0,0-3.3,6.83A96.67,96.67,0,0,0,53.22,6.83,77.19,77.19,0,0,0,49.88,0,105.15,105.15,0,0,0,19.44,8.07C3.66,31.58-1.86,54.65,1,77.53A105.73,105.73,0,0,0,32,96.36a77.7,77.7,0,0,0,6.63-10.85,68.43,68.43,0,0,1-10.45-5c.87-.64,1.72-1.3,2.53-2a75.72,75.72,0,0,0,72.93,0c.81.68,1.66,1.34,2.53,2a68.52,68.52,0,0,1-10.45,5,78.27,78.27,0,0,0,6.63,10.85,105.73,105.73,0,0,0,31.42-18.83C129.87,49.65,123.63,26.83,107.7,8.07ZM42.45,65.69C36.18,65.69,31,60,31,53S36.18,40.36,42.45,40.36,53.83,46,53.83,53,48.72,65.69,42.45,65.69Zm42.24,0C78.41,65.69,73.24,60,73.24,53S78.41,40.36,84.69,40.36,96.07,46,96.07,53,91,65.69,84.69,65.69Z"/></svg>
+                    </a>
+                </div>
+
+                <button class="theme-toggle-btn" id="theme-toggle" aria-label="Farbschema umschalten">
+                    <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+                </button>
+
+                <button class="mobile-menu-btn" id="mobile-menu-toggle" aria-label="Menü öffnen">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main>
+        <div class="portal-container">
+            
+            <!-- Sidebar Navigation -->
+            <aside class="portal-sidebar">
+                <div class="sidebar-user">
+                    <div class="sidebar-avatar" id="sidebar-avatar-preview">
+                        U
+                    </div>
+                    <div class="sidebar-user-info">
+                        <div class="sidebar-username" id="sidebar-username-el">Benutzer</div>
+                        <span class="sidebar-role-badge" id="sidebar-role-el">Rang</span>
+                    </div>
+                </div>
+
+                <div class="sidebar-menu">
+                    <button class="sidebar-menu-btn active" data-tab="onduty">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9"/><rect x="14" y="3" width="7" height="5"/><rect x="14" y="12" width="7" height="9"/><rect x="3" y="16" width="7" height="5"/></svg>
+                        OnDuty Panel
+                    </button>
+                    <button class="sidebar-menu-btn" data-tab="news">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M16 8h2"/><path d="M16 12h2"/><path d="M16 16h2"/><path d="M6 8h6v8H6z"/></svg>
+                        News verwalten
+                    </button>
+                    <button class="sidebar-menu-btn" data-tab="users">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                        Benutzer verwalten
+                    </button>
+                    <button class="sidebar-menu-btn" data-tab="rules">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="2" x2="12" y2="22"/><line x1="5" y1="7" x2="19" y2="7"/><path d="M9 22a3 3 0 0 1-6 0"/><path d="M21 22a3 3 0 0 1-6 0"/><path d="M6 7l3 8h-6l3-8M18 7l3 8h-6l3-8"/></svg>
+                        Regelwerk Editor
+                    </button>
+                    <button class="sidebar-menu-btn" data-tab="settings">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+                        Einstellungen
+                    </button>
+                    
+                    <button class="sidebar-menu-btn sidebar-logout-btn" id="logout-btn">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+                        Abmelden
+                    </button>
+                </div>
+            </aside>
+
+            <!-- Workspace content -->
+            <div class="portal-workspace">
+                
+                <!-- 1. TAB: ONDUTY PANEL -->
+                <div class="portal-panel active" id="panel-onduty">
+                    <div class="panel-header">
+                        <div class="panel-header-text">
+                            <h2 class="panel-title">OnDuty Panel</h2>
+                            <p class="panel-subtitle">Deine Kommandozentrale für aktive Runden, Prüfungen und administrative Berechnungen.</p>
+                        </div>
+                        <button class="btn btn-secondary" id="open-customizer-btn" style="padding: 0.6rem 1.15rem; font-size: 0.85rem; font-weight: 600; display: flex; align-items: center; gap: 0.4rem;">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+                            Layout anpassen
+                        </button>
+                    </div>
+
+                    <!-- Personalizable Grid Container -->
+                    <div class="onduty-grid" id="onduty-widgets-grid">
+                        
+                        <!-- Widget: Stoppuhr -->
+                        <div class="portal-card widget-half" id="widget-stopwatch">
+                            <div class="portal-card-title">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                                Stoppuhr
+                            </div>
+                            <div class="digital-clock" id="stopwatch-display">00:00:00.00</div>
+                            <div class="widget-controls">
+                                <button class="btn btn-primary" id="stopwatch-start">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                                    Start
+                                </button>
+                                <button class="btn btn-secondary" id="stopwatch-pause" disabled>
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+                                    Pause
+                                </button>
+                                <button class="btn btn-danger" id="stopwatch-reset">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
+                                    Reset
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Widget: Belegbarer Timer -->
+                        <div class="portal-card widget-half" id="widget-timer">
+                            <div class="portal-card-title">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                                Countdown-Timer
+                            </div>
+                            
+                            <div class="timer-presets">
+                                <button class="preset-btn" data-sec="60">+1 Min</button>
+                                <button class="preset-btn" data-sec="300">+5 Min</button>
+                                <button class="preset-btn" data-sec="600">+10 Min</button>
+                                <button class="preset-btn" data-sec="900">+15 Min</button>
+                                <button class="preset-btn" data-sec="1800">+30 Min</button>
+                            </div>
+
+                            <div class="timer-input-group">
+                                <input type="number" id="timer-hr" class="timer-input" placeholder="HH" min="0" max="99" value="0">
+                                <span>:</span>
+                                <input type="number" id="timer-min" class="timer-input" placeholder="MM" min="0" max="59" value="5">
+                                <span>:</span>
+                                <input type="number" id="timer-sec" class="timer-input" placeholder="SS" min="0" max="59" value="0">
+                            </div>
+
+                            <div class="digital-clock" id="timer-display">00:05:00</div>
+                            
+                            <div class="widget-controls">
+                                <button class="btn btn-primary" id="timer-start">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                                    Start
+                                </button>
+                                <button class="btn btn-secondary" id="timer-pause" disabled>
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+                                    Pause
+                                </button>
+                                <button class="btn btn-danger" id="timer-reset">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
+                                    Reset
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Widget: Punkte-Rechner -->
+                        <div class="portal-card widget-half" id="widget-calculator">
+                            <div class="portal-card-title">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="16" y1="14" x2="16" y2="18"/><path d="M16 10h.01M12 10h.01M8 10h.01M12 14h.01M8 14h.01M12 18h.01M8 18h.01"/></svg>
+                                RP-Rechner (Punkte-Vergabe)
+                            </div>
+                            <div class="calc-wrapper">
+                                <div class="calc-display" id="calc-display">0</div>
+                                <div class="calc-buttons">
+                                    <button class="calc-btn op" id="calc-clear">C</button>
+                                    <button class="calc-btn op" id="calc-back">⌫</button>
+                                    <button class="calc-btn op" id="calc-div">/</button>
+                                    <button class="calc-btn op" id="calc-mul">*</button>
+
+                                    <button class="calc-btn" data-val="7">7</button>
+                                    <button class="calc-btn" data-val="8">8</button>
+                                    <button class="calc-btn" data-val="9">9</button>
+                                    <button class="calc-btn op" id="calc-sub">-</button>
+
+                                    <button class="calc-btn" data-val="4">4</button>
+                                    <button class="calc-btn" data-val="5">5</button>
+                                    <button class="calc-btn" data-val="6">6</button>
+                                    <button class="calc-btn op" id="calc-add">+</button>
+
+                                    <button class="calc-btn" data-val="1">1</button>
+                                    <button class="calc-btn" data-val="2">2</button>
+                                    <button class="calc-btn" data-val="3">3</button>
+                                    <button class="calc-btn equal" id="calc-equals">=</button>
+
+                                    <button class="calc-btn" style="grid-column: span 2;" data-val="0">0</button>
+                                    <button class="calc-btn" data-val=".">.</button>
+                                    <button class="calc-btn op" id="calc-use-points" title="Ergebnis als Punkte übernehmen" style="display:flex; align-items:center; justify-content:center;">
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                    </button>
+                                </div>
+
+                                <div class="calc-points-panel">
+                                    <div class="points-header">
+                                        <span>Aktiver Punktestand (für Prüfungen)</span>
+                                        <span>Max: 100 | Bestehen: 70</span>
+                                    </div>
+                                    <div class="points-counter">
+                                        <div class="points-val" id="points-display">0 / 100 Punkte</div>
+                                        <div class="points-adjusters">
+                                            <button class="adjust-btn" id="pts-sub-10">-10</button>
+                                            <button class="adjust-btn" id="pts-sub-1">-1</button>
+                                            <button class="adjust-btn" id="pts-add-1">+1</button>
+                                            <button class="adjust-btn" id="pts-add-10">+10</button>
+                                            <button class="adjust-btn" style="background: rgba(220, 38, 38, 0.1); color: var(--danger); border-color: var(--danger);" id="pts-reset">Reset</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Widget: Notizfeld -->
+                        <div class="portal-card widget-half" id="widget-notes">
+                            <div class="portal-card-title">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+                                Notizen
+                            </div>
+                            <div class="notes-wrapper">
+                                <textarea class="notes-textarea" id="notes-textarea" placeholder="Deine persönlichen Notizen hier... (wird automatisch gespeichert)"></textarea>
+                                <div class="notes-footer">
+                                    <span id="notes-save-status">💾 Autosave im Browser</span>
+                                    <button class="btn btn-secondary" style="padding: 4px 10px; font-size: 0.75rem; display:flex; align-items:center; gap:0.3rem;" id="notes-copy-btn">
+                                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                                        Kopieren
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Spezial-Card: Prüfung beginnen -->
+                        <div class="portal-card widget-full" id="widget-exam">
+                            <div class="portal-card-title">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"/></svg>
+                                Prüfungs-Assistent
+                            </div>
+                            
+                            <div class="exam-status-bar">
+                                <div>
+                                    <span class="exam-status-dot" id="exam-status-dot"></span>
+                                    <span style="font-weight: 700; font-size: 0.9rem; margin-left: 0.5rem;" id="exam-status-text">Keine aktive Prüfung</span>
+                                </div>
+                                <div id="exam-time-elapsed" style="font-family: monospace; font-weight: 700; color: var(--text-secondary); display: none;">Zeit: 00:00</div>
+                            </div>
+
+                            <button class="exam-toggle-btn inactive" id="exam-toggle-btn">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                                Prüfung beginnen
+                            </button>
+
+                            <div class="exam-assistant" id="exam-assistant-container">
+                                <div class="exam-input-grid">
+                                    <div class="form-group">
+                                        <label class="exam-label" for="exam-candidate">Name des Prüflings</label>
+                                        <input type="text" class="exam-input" id="exam-candidate" placeholder="Roblox Benutzername">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="exam-label" for="exam-type">Prüfungs-Typ</label>
+                                        <select class="exam-select" id="exam-type">
+                                            <option value="polizei">Polizei Grundausbildung (LSPD)</option>
+                                            <option value="support">Support-Team Qualifikation</option>
+                                            <option value="fahrprüfung">Fahr- und Verfolgungsprüfung</option>
+                                            <option value="custom">Benutzerdefinierte Prüfung</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="exam-checklist-section">
+                                    <div class="exam-checklist-title">Abzuhakende Prüfungsschritte:</div>
+                                    <div class="exam-checklist" id="exam-checklist-items">
+                                        <!-- Populated via JS -->
+                                    </div>
+                                </div>
+
+                                <div class="exam-score-panel">
+                                    <div class="exam-score-details">
+                                        <span style="font-size: 0.8rem; font-weight: 600; color: var(--text-secondary);">Aktuelles Gesamtergebnis</span>
+                                        <div class="exam-score-val" id="exam-score-percent">0% (0 / 100 Pkt.)</div>
+                                    </div>
+                                    <div class="exam-badge failed" id="exam-pass-badge">NICHT BESTANDEN</div>
+                                </div>
+
+                                <div class="form-group" style="margin-top: 1rem;">
+                                    <label class="exam-label" for="exam-notes">Anmerkungen & Bemerkungen</label>
+                                    <textarea id="exam-notes" class="exam-input" rows="3" placeholder="Zusätzliche Beobachtungen eingeben..."></textarea>
+                                </div>
+
+                                <div class="protocol-area">
+                                    <label class="exam-label">Generiertes Prüfungs-Protokoll</label>
+                                    <div class="protocol-box" id="exam-protocol-box">Trage einen Namen ein und hake Kriterien ab, um das Protokoll zu generieren...</div>
+                                    <button class="btn btn-primary" style="margin-top: 0.5rem; display: flex; align-items: center; justify-content: center; gap: 0.5rem;" id="copy-protocol-btn" disabled>
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg>
+                                        Protokoll kopieren & Prüfung abschließen
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- 2. TAB: NEWS VERWALTEN -->
+                <div class="portal-panel" id="panel-news">
+                    <div class="panel-header">
+                        <div class="panel-header-text">
+                            <h2 class="panel-title">News-Verwaltung</h2>
+                            <p class="panel-subtitle">Erstelle, bearbeite und lösche Beiträge, die auf der Website im News-Bereich zu sehen sind.</p>
+                        </div>
+                    </div>
+
+                    <!-- Formular: Beitrag erstellen / bearbeiten -->
+                    <div class="portal-card">
+                        <div class="portal-card-title" id="news-form-title">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+                            <span id="news-form-title-text">Neuen Beitrag erstellen</span>
+                        </div>
+                        <form id="news-form">
+                            <input type="hidden" id="news-id" value="">
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label for="news-title">Titel</label>
+                                    <input type="text" id="news-title" required placeholder="z. B. Server-Wartungsarbeiten">
+                                </div>
+                                <div class="form-group">
+                                    <label for="news-category">Kategorie</label>
+                                    <select id="news-category">
+                                        <option value="Update">Update</option>
+                                        <option value="Event">Event</option>
+                                        <option value="Staff">Staff</option>
+                                        <option value="Allgemein">Allgemein</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group" style="margin-bottom: 1rem;">
+                                <label for="news-placeholder">Bild-Platzhalter Text (Erscheint als Symbol-Text)</label>
+                                <input type="text" id="news-placeholder" required placeholder="z. B. Wartung 2026">
+                            </div>
+                            <div class="form-group" style="margin-bottom: 1.5rem;">
+                                <label for="news-excerpt">Inhalt / Auszug</label>
+                                <textarea id="news-excerpt" rows="4" required placeholder="Worum geht es in dieser News? Detaillierte Infos hier reinschreiben..."></textarea>
+                            </div>
+                            <div style="display: flex; gap: 0.5rem;">
+                                <button type="submit" class="btn btn-primary" id="news-submit-btn" style="display:flex; align-items:center; gap:0.4rem;">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                                    Beitrag veröffentlichen
+                                </button>
+                                <button type="button" class="btn btn-secondary" id="news-cancel-btn" style="display: none; align-items:center; gap:0.4rem;">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                                    Abbrechen
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- News-Liste Tabelle -->
+                    <div class="portal-card">
+                        <div class="portal-card-title">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M16 8h2"/><path d="M16 12h2"/><path d="M16 16h2"/><path d="M6 8h6v8H6z"/></svg>
+                            Veröffentlichte Beiträge
+                        </div>
+                        <div class="table-responsive">
+                            <table class="portal-table">
+                                <thead>
+                                    <tr>
+                                        <th>Datum</th>
+                                        <th>Kategorie</th>
+                                        <th>Titel</th>
+                                        <th>Inhalt (Auszug)</th>
+                                        <th style="width: 150px; text-align: center;">Aktionen</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="news-table-body">
+                                    <!-- Rendered via JS -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. TAB: BENUTZER VERWALTEN -->
+                <div class="portal-panel" id="panel-users">
+                    <div class="panel-header">
+                        <div class="panel-header-text">
+                            <h2 class="panel-title">Benutzer verwalten</h2>
+                            <p class="panel-subtitle">Teammitglieder anlegen, Ränge anpassen und Anmeldedaten verwalten.</p>
+                        </div>
+                    </div>
+
+                    <!-- Formular: Benutzer anlegen / editieren -->
+                    <div class="portal-card">
+                        <div class="portal-card-title">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" y1="8" x2="20" y2="14"/><line x1="23" y1="11" x2="17" y2="11"/></svg>
+                            <span id="user-form-title-el">Neues Teammitglied anlegen</span>
+                        </div>
+                        <form id="user-form">
+                            <input type="hidden" id="user-original-username" value="">
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label for="user-username">Benutzername</label>
+                                    <input type="text" id="user-username" required placeholder="z. B. LeonRP">
+                                </div>
+                                <div class="form-group">
+                                    <label for="user-password">Passwort</label>
+                                    <input type="password" id="user-password" required placeholder="Anmeldepasswort">
+                                </div>
+                            </div>
+
+                            <div class="form-grid" style="margin-bottom: 1.5rem;">
+                                <div class="form-group">
+                                    <label for="user-primary-role">Haupt-Rang (Primäre Rolle)</label>
+                                    <select id="user-primary-role" required>
+                                        <!-- Filled via JS -->
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>Zusatz-Rollen (Nebenrollen)</label>
+                                    <div class="checkbox-grid">
+                                        <label class="checkbox-item">
+                                            <input type="checkbox" name="user-sec-role" value="Management Leader">
+                                            <span>Management Leader</span>
+                                        </label>
+                                        <label class="checkbox-item">
+                                            <input type="checkbox" name="user-sec-role" value="Event Management">
+                                            <span>Event Management</span>
+                                        </label>
+                                        <label class="checkbox-item">
+                                            <input type="checkbox" name="user-sec-role" value="Fraktions Management">
+                                            <span>Fraktions Management</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div style="display: flex; gap: 0.5rem;">
+                                <button type="submit" class="btn btn-primary" id="user-submit-btn" style="display:flex; align-items:center; gap:0.4rem;">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+                                    Mitglied speichern
+                                </button>
+                                <button type="button" class="btn btn-secondary" id="user-cancel-btn" style="display: none; align-items:center; gap:0.4rem;">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                                    Abbrechen
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Liste der Mitglieder (Overhauled Grid) -->
+                    <div class="portal-card">
+                        <div class="portal-card-title">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                            Registrierte Team-Accounts
+                        </div>
+
+                        <!-- Live Filters & Search -->
+                        <div class="user-filters-bar">
+                            <div class="filter-search-container">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                                <input type="text" id="user-search-input" class="filter-search-input" placeholder="Nach Mitgliedern suchen...">
+                            </div>
+                            <div class="filter-btn-group">
+                                <button class="filter-category-btn active" data-filter="all">Alle Ränge</button>
+                                <button class="filter-category-btn" data-filter="leitung">Leitung</button>
+                                <button class="filter-category-btn" data-filter="admin">Admin</button>
+                                <button class="filter-category-btn" data-filter="moderation">Mod</button>
+                                <button class="filter-category-btn" data-filter="praktikant">Praktikant</button>
+                            </div>
+                        </div>
+
+                        <!-- User Cards Dynamic Grid -->
+                        <div class="user-cards-grid" id="users-cards-container">
+                            <!-- Rendered via JS -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. TAB: REGELWERK EDITOR -->
+                <div class="portal-panel" id="panel-rules">
+                    <div class="panel-header">
+                        <div class="panel-header-text">
+                            <h2 class="panel-title">Regelwerk Editor</h2>
+                            <p class="panel-subtitle">Editiere das offizielle Regelwerk. Änderungen werden direkt auf der Website unter 'Regelwerke' angezeigt.</p>
+                        </div>
+                    </div>
+
+                    <!-- Kategorieauswahl (Ingame, Fraktion, Discord) -->
+                    <div class="rules-category-tabs">
+                        <button class="rules-cat-btn active" data-group="ingame">Ingame Regelwerk</button>
+                        <button class="rules-cat-btn" data-group="fraktion">Fraktions Regelwerk</button>
+                        <button class="rules-cat-btn" data-group="discord">Discord Regelwerk</button>
+                    </div>
+
+                    <!-- Formular: Regel hinzufügen / bearbeiten -->
+                    <div class="portal-card">
+                        <div class="portal-card-title" id="rule-form-title">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22V8M5 12H19M22 7H2M16 8v2a6 6 0 0 1-12 0V8"/></svg>
+                            <span id="rule-form-title-text">Neuen Paragraphen / Bereich anlegen</span>
+                        </div>
+                        <form id="rule-form">
+                            <input type="hidden" id="rule-id" value="">
+                            <div class="form-grid">
+                                <div class="form-group" style="flex-grow: 0; flex-shrink: 0; width: 120px;">
+                                    <label for="rule-num">Nummer</label>
+                                    <input type="text" id="rule-num" required placeholder="z. B. §1.4">
+                                </div>
+                                <div class="form-group" style="flex-grow: 1;">
+                                    <label for="rule-title">Titel / Überschrift</label>
+                                    <input type="text" id="rule-title" required placeholder="z. B. Verhalten im Support">
+                                </div>
+                            </div>
+                            <div class="form-group" style="margin-bottom: 1rem;">
+                                <label for="rule-searchtags">Suchbegriffe (durch Leerzeichen getrennt)</label>
+                                <input type="text" id="rule-searchtags" placeholder="z. B. support tickets admin tools verhalten sperre">
+                            </div>
+
+                            <div style="margin-bottom: 1rem;">
+                                <label class="exam-label" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                                    <span>Klauseln / Absätze</span>
+                                    <button type="button" class="btn btn-secondary" style="padding: 4px 10px; font-size: 0.75rem; display:flex; align-items:center; gap:0.25rem;" id="rule-add-clause-field">
+                                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                                        Absatz hinzufügen
+                                    </button>
+                                </label>
+                                <div id="rule-clauses-container" style="display: flex; flex-direction: column; gap: 0.5rem;">
+                                    <!-- Populated via JS -->
+                                </div>
+                            </div>
+
+                            <div style="display: flex; gap: 0.5rem;">
+                                <button type="submit" class="btn btn-primary" id="rule-submit-btn" style="display:flex; align-items:center; gap:0.4rem;">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+                                    Änderungen speichern
+                                </button>
+                                <button type="button" class="btn btn-secondary" id="rule-cancel-btn" style="display: none; align-items:center; gap:0.4rem;">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                                    Abbrechen
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Liste der aktuellen Regeln der aktiven Kategorie -->
+                    <div class="portal-card">
+                        <div class="portal-card-title" id="rules-list-title">⚖️ Aktuelle Regeln im Ingame Regelwerk</div>
+                        <div id="rules-editor-list">
+                            <!-- Rendered via JS -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5. TAB: EINSTELLUNGEN -->
+                <div class="portal-panel" id="panel-settings">
+                    <div class="panel-header">
+                        <div class="panel-header-text">
+                            <h2 class="panel-title">Einstellungen</h2>
+                            <p class="panel-subtitle">Verwalte deine Profil-Zugangsdaten und deinen personalisierten Avatar.</p>
+                        </div>
+                    </div>
+
+                    <div class="portal-card" style="max-width: 600px; margin: 0 auto;">
+                        <div class="portal-card-title">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+                            Profil bearbeiten
+                        </div>
+                        <form id="settings-form">
+                            
+                            <div class="avatar-upload-container">
+                                <div class="avatar-preview" id="settings-avatar-preview">A</div>
+                                <div class="avatar-upload-btn-wrapper">
+                                    <button type="button" class="btn btn-secondary" style="padding: 6px 12px; font-size: 0.85rem; display:flex; align-items:center; gap:0.3rem;">
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                                        Avatar-Bild wählen
+                                    </button>
+                                    <input type="file" id="settings-avatar-file" accept="image/*">
+                                </div>
+                                <p style="font-size: 0.75rem; color: var(--text-muted); margin-top: -0.5rem;">Empfohlen: Quadratisches Format. Bild wird verschlüsselt im Browser gesichert.</p>
+                            </div>
+
+                            <div class="form-group" style="margin-bottom: 1rem;">
+                                <label for="settings-username">Benutzername</label>
+                                <input type="text" id="settings-username" required placeholder="Dein neuer Benutzername">
+                            </div>
+
+                            <div class="form-group" style="margin-bottom: 1.5rem;">
+                                <label for="settings-password">Neues Passwort (leer lassen für keine Änderung)</label>
+                                <input type="password" id="settings-password" placeholder="Neues Passwort eingeben">
+                            </div>
+
+                            <button type="submit" class="btn btn-primary" style="width: 100%; padding: 0.85rem; display:flex; align-items:center; justify-content:center; gap:0.4rem;">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+                                Einstellungen speichern
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- ================= LAYOUT CUSTOMIZER MODAL OVERLAY ================= -->
+    <div class="modal-overlay" id="layout-customizer-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="9" y1="3" x2="9" y2="21"/><line x1="15" y1="3" x2="15" y2="21"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="3" y1="15" x2="21" y2="15"/></svg>
+                    OnDuty Layout anpassen
+                </h3>
+                <button class="modal-close-btn" id="close-customizer-btn">&times;</button>
+            </div>
+            <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 1rem; margin-top: -0.5rem;">Blende Schicht-Elemente ein/aus, wähle deren Größe und ordne sie per Reihenfolge-Pfeilen an.</p>
+            
+            <!-- List of customizeable items -->
+            <div class="customizer-list" id="customizer-items-list">
+                <!-- Dynamically populated via JS -->
+            </div>
+
+            <div style="display:flex; justify-content:flex-end; gap:0.5rem; border-top:1px solid var(--border); padding-top:1rem;">
+                <button class="btn btn-secondary" id="customizer-reset-btn" style="font-size:0.85rem; padding:0.6rem 1.15rem;">Standardwerte</button>
+                <button class="btn btn-primary" id="customizer-save-btn" style="font-size:0.85rem; padding:0.6rem 1.15rem; display:flex; align-items:center; gap:0.4rem;">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    Speichern
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Global Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-info">
+                <div class="footer-logo">
+                    <img src="../Bilder/p4d93rk-removebg-preview.png" alt="NRW RP Logo">
+                    <div class="footer-logo-text">NRW RP</div>
+                </div>
+                <p class="footer-desc">Wir bieten leidenschaftliches, strukturiertes und realistisches deutsches Roleplay auf Basis von ERLC Roblox.</p>
+                <div class="footer-socials">
+                    <a href="https://discord.gg/nrw-rp" target="_blank" class="social-icon-btn" title="Discord" aria-label="Discord">💬</a>
+                    <a href="https://tiktok.com/@nrwrp" target="_blank" class="social-icon-btn" title="TikTok" aria-label="TikTok">🎵</a>
+                    <a href="https://instagram.com/nrwrp" target="_blank" class="social-icon-btn" title="Instagram" aria-label="Instagram">📸</a>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-col">
+                <h4>Navigation</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Startseite</a></li>
+                    <li><a href="infos.html">Infos</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="fuehrung.html">Führung</a></li>
+                </ul>
+            </div>
+
+            <!-- Support Links -->
+            <div class="footer-col">
+                <h4>Regeln & Support</h4>
+                <ul class="footer-links">
+                    <li><a href="regelwerke.html">Regelwerke</a></li>
+                    <li><a href="login.html">Staff Portal</a></li>
+                    <li><a href="https://discord.gg/nrw-rp" target="_blank">Discord Ticket</a></li>
+                </ul>
+            </div>
+
+            <!-- Server Details -->
+            <div class="footer-col">
+                <h4>Server Details</h4>
+                <ul class="footer-links">
+                    <li>Roblox Game: ERLC</li>
+                    <li>Server-Code: <span style="font-weight: 700; color: var(--accent);">NRW-RP</span></li>
+                    <li>Sprache: Deutsch</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 NRW RP Community. Alle Rechte vorbehalten. Privatprojekt, keine Verbindung zu Roblox Corp.</p>
+            <div class="footer-bottom-links">
+                <a href="impressum.html">Impressum</a>
+                <a href="impressum.html">Datenschutz</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+    <script src="staff-portal-melonly.js"></script>
+</body>
+</html>
